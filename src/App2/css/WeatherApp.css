@@ -1,0 +1,38 @@
+.weather-app {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.weather-search {
+  margin-left: 5px;
+}
+.weather-text {
+  font-size: 15px;
+  color: #3c3c3c;
+}
+.weather-app img {
+  width:50px;
+  height: 50px;
+}
+.local-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.local-temp {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+.local-name {
+  font-weight: bold;
+  text-align: center;
+}
+.weather-item {
+  margin-top: 10px;
+  border: solid 1px #b3b3b3;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+}

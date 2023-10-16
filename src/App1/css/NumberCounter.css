@@ -1,0 +1,15 @@
+.counter-wrap {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.counter-wrap button {
+  width: 50px;
+}
+.btn-wrap {
+  display: flex;
+}
+.counter-wrap button:last-of-type {
+  margin-left: 5px;
+}

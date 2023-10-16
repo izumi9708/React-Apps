@@ -1,0 +1,37 @@
+.toggle-switch {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.switch-btn {
+  width: 60px;
+  border: solid 1px rgb(174 174 174);
+  height: 25px;
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  background-color: rgb(188 188 188);
+  transition: ease-in-out .2s;
+}
+.btn-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  border: solid 1px rgb(174 174 174);
+  position: absolute;
+  top: 50%;
+  left: 1px;
+  transform: translate(0,-50%);
+  background-color: #ffff;
+  transition: ease-in-out .2s;
+}
+.toggle-active {
+  background-color: rgb(227 14 163);
+  transition: ease-in-out .2s;
+}
+.circle-active {
+  left: 35px;
+  
+  transition: ease-in-out .2s;
+}

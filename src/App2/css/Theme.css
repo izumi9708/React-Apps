@@ -1,0 +1,32 @@
+.theme-wrap {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.toggle-area {
+  border: solid 1px #d3d3d3;
+  padding: 5px;
+  border-radius: 5px;
+  width: 270px;
+}
+.elem1 {
+  width: 30px;
+    height: 30px;
+    border: solid 1px #d8d8d8;
+    border-radius: 5px;
+    background-color: #748ec1;
+}
+.elem2,.elem3 {
+  border: solid 1px #ddd;
+  width: 50%;
+  height: 15px;
+  border-radius: 5px;
+  background-color: #cfa2c2;
+}
+.right {
+  background-color: #fefff6;
+}
+.dark {
+  background-color: #626262;
+}

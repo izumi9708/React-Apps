@@ -1,0 +1,22 @@
+.count-down-timer {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.count-down-timer p {
+  margin: 0;
+}
+.count-down-timer　label {
+  display: flex;
+}
+.count-down-timer input {
+  padding: 5px;
+  width: 50px;
+  display: block;
+}
+.count-down-timer button {
+  margin-top: 5px;
+  width: 150px;
+  display: block;
+}

@@ -1,0 +1,80 @@
+.search-anime {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.anime-content-text {
+  font-size: 14px;
+  color: #585858;
+}
+.display-list {
+  margin-top: 10px;
+  background-color: #0D2356;
+  border-radius: 5px;
+  padding: 0 10px 10px 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.anime-container {
+  display: flex;
+  justify-content: space-between;
+}
+.anime-item {
+  width: 150px;
+  background-color: #ffff;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: ease-in-out .2s;
+  margin-left: 10px;
+}
+.anime-img {
+  width: 150px;
+  height: 210px;
+  overflow: hidden;
+}
+.anime-img img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+.anime-item:hover img {
+  transform: scale(1.2);
+  transition: ease-in-out .2s;
+}
+.anime-item h2 {
+  margin: 0;
+  font-size: 15px;
+}
+.anime-item-text {
+  padding: 5px;
+  padding-top: 0;
+}
+.load-wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+.load-icon {
+  width: 20px;
+  height: 17px;
+  margin-left: 5px;
+}
+.load-icon svg {
+  stroke: #410ed3;
+}
+.load-text {
+  color: #410ed3;
+  font-weight: bold;
+}
+.load-icon svg circle {
+  fill: #410ed3;
+}
+.search-anime svg {
+  width: 100%;
+  height: 100%;
+}
+.anime-container p {
+  font-size: 14px;
+  color: #8a8a8a;
+}

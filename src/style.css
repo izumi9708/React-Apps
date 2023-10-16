@@ -1,0 +1,27 @@
+p {
+  margin: 0;
+}
+.wrap {
+  width: 500px;
+}
+.file-name {
+  font-size: 14px;
+  color: rgb(88, 88, 88);
+}
+
+button {
+  background-color: #410ed3;
+  border-radius: 5px;
+  border: none;
+  color: #ffff;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+}
+input {
+  padding: 5px;
+  margin-top: 5px;
+  border: solid 1px rgb(172, 172, 172);
+  border-radius: 5px;
+  background-color: rgb(241 241 241);
+}

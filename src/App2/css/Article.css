@@ -1,0 +1,48 @@
+.article {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.article-list {
+  text-decoration: none;
+  color: #2e0da9;
+}
+
+.article-list-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: #2e0da9;
+}
+.article-list-item:hover {
+  background-color: #2e0da9;
+}
+
+.article-list-item p {
+  border: solid 1px #2e0da9;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.article-topick {
+  border: solid 1px #b5b5b5;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.topick-title {
+  font-weight: bold;
+}
+.topick-text {
+  font-size: 14px;
+}
+
+.topick-back {
+  cursor: pointer;
+  color: #2e0da9;
+  text-decoration: none;
+}
+.topick-back::before{
+  content: '<';
+  margin-right: 3px;
+}

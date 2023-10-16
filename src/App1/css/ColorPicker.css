@@ -1,0 +1,21 @@
+.color-picker {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.select-wrap-item {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+}   
+.preview-color {
+  width: 30px;
+  height: 30px;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.preview-color input {
+  opacity: 0;
+  cursor: pointer;
+}

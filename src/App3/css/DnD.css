@@ -1,0 +1,23 @@
+.dnd {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.dnd li {
+  list-style: none;
+}
+.dnd-area {
+  border: solid 1px #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.dnd-item {
+  border: solid 1px #155dc0;
+  margin-top: 10px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  color: #155dc0;
+}

@@ -1,0 +1,43 @@
+.search-account {
+  margin-top: 20px;
+  border:solid 1px rgb(199, 199, 199);
+  padding: 10px;
+  border-radius: 5px;
+}
+.github-icon {
+  display: inline-block;
+  width: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.search-area input {
+  width: 200px;
+}
+.search-btn {
+  width: 70px;
+  margin-left: 10px;
+}
+
+.user-info {
+  display: flex;
+  padding: 10px;
+  border: solid 1px #b0b0b0;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.user-img {
+  width: 70px;
+  height: 70px;
+}
+
+.user-name {
+  font-size: 17px;
+  font-weight: bold;
+}
+.detail-item {
+  font-size: 14px;
+}
+.detail-item span {
+  font-weight: bold;
+  margin-left: 5px;
+}

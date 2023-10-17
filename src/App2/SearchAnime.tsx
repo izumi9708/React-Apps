@@ -69,7 +69,7 @@ function SearchAnime(){
           <input type="text" placeholder="例）ドラゴンボール"/>
           <button type="button" className="search-btn"
             onClick={searchAnimeList}>
-          　検索
+            検索
           </button>
             {isLoding ?
             (

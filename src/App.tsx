@@ -6,7 +6,7 @@ import App3 from './App3/App3';
 import Top from './Top';
 
 import {useEffect} from 'react';
-import {BrowserRouter,Switch,Route,Link} from 'react-router-dom';
+import {HashRouter as BrowserRouter,Switch,Route,Link} from 'react-router-dom';
 
 
 function App(){
@@ -46,13 +46,13 @@ function App(){
           トップ
         </Link>
         <Link className="link-item" data-path="App1" to="/App1/App1" onClick={toggleActive}>
-          App1へ
+          App集1
         </Link>
         <Link className="link-item" data-path="App2" to="/App2/App2" onClick={toggleActive}>
-          App2へ
+          App集2
         </Link>
         <Link className="link-item" data-path="App3" to="/App3/App3" onClick={toggleActive}>
-          App3へ
+          App集3
         </Link>
       </div>
 

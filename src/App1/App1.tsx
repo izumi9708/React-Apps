@@ -13,11 +13,11 @@ function App1(){
   return (
     <>
       {/* <CountDownTimer/> */}
-      <ToggleSwitch/>
+      <SearchAccount/>
       <ColorPicker/>
       <FilteredList list={emailList}/>
       <ShoppingCart products={productsData}/>
-      <SearchAccount/>
+      <ToggleSwitch/>
     </>
   )
 }

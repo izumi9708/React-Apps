@@ -22,9 +22,9 @@ function App2(){
     <>
       <AppContext.Provider value={{testState,setState}}>
       <WeatherApp/>
+      <SearchAnime/>
       <Quiz data={quizData}/>
       <ArticleIndex/>
-      <SearchAnime/>
       {/* <UseAuth/> */}
       </AppContext.Provider>
       {/* <DamyFetch/> */}

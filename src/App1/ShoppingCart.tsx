@@ -139,7 +139,7 @@ function ShoppingCart(data:Param){
   }
 
   return (
-    <div className="shopping-cart">
+    <div className="shopping-cart wrap">
       {displayJSX()}
     </div>
   )

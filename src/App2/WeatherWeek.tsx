@@ -25,6 +25,7 @@ export type {FutureList}
 
 function WeatherWeek(props:PropsData){
   const [futureData,setFutureData] = useState<FutureList>();
+  const [isLooding,setLooding]     = useState<boolean>();
 
   const date  = new Date();
   const month = date.getMonth() + 1;
@@ -33,12 +34,18 @@ function WeatherWeek(props:PropsData){
   type GetFutureData = (lat:number,lon:number) => Promise<FutureList>;
   const getFutureData:GetFutureData = async(lat:number,lon:number) => {
     try {
+      await new Promise((resolve, reject) => {
+        setLooding(true);
+        resolve('');
+      })
+
       const result = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&lang=ja&&appid=5fd5e4b2c8f430197fbfddfe9c328c2f`);
+      if(result.status)setLooding(false);
 
       return result.json();
 
     }catch(error){
-      console.error(error);
+      alert('データの取得に失敗しました')
     }
   }
 
@@ -47,14 +54,14 @@ function WeatherWeek(props:PropsData){
     .then(res => {
         setFutureData(res);
     })
-  })
+  },[props])
 
   return (
     <div className="weather-display-wrap">
       <div className="current-weather">
         <div className="main-weather">
           <div className="main-container">
-            <span className="current-date">{month}月${day}日</span>
+            <span className="current-date">{month}月{day}日</span>
             <h2 className="city-name">{props.data.name}</h2>
             <div className="main-container-item">
               <div className="main-weather-icon"><img alt='本日の天気アイコン' src={`https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`}/></div>
@@ -85,11 +92,22 @@ function WeatherWeek(props:PropsData){
           </div>
         </div>
         {
-          futureData && 
-          <WeatherSubDisplay
-            currentDate={ date }
-            futureData={ futureData }
-          />
+          isLooding
+          ?
+            ( 
+              <div className="load-wrap">
+                <div className="load-icon">
+                  <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg" stroke="#fff"><g fill="none" fillRule="evenodd" strokeWidth="3"><circle cx="22" cy="22" r="1"><animate attributeName="r" begin="0s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" /><animate attributeName="stroke-opacity" begin="0s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" /></circle><circle cx="22" cy="22" r="1"><animate attributeName="r" begin="-0.9s" dur="1.8s" values="1; 20" calcMode="spline" keyTimes="0; 1" keySplines="0.165, 0.84, 0.44, 1" repeatCount="indefinite" /><animate attributeName="stroke-opacity" begin="-0.9s" dur="1.8s" values="1; 0" calcMode="spline" keyTimes="0; 1" keySplines="0.3, 0.61, 0.355, 1" repeatCount="indefinite" /></circle></g></svg>
+                </div>
+                <p className="load-text">翌日以降の天気情報を取得してます</p>
+              </div>
+            )
+          :
+            futureData && 
+              <WeatherSubDisplay
+                currentDate={ date }
+                futureData={ futureData }
+              />
         }
       </div>
     </div>

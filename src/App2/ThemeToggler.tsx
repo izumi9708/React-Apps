@@ -3,7 +3,7 @@ import {useContext} from 'react';
 import {ThemeContext} from './ThemeContextComponent';
 
 function ThemeToggler(){
-  const {currentTheme,toggleTheme} = useContext(ThemeContext);
+  const {toggleTheme} = useContext(ThemeContext);  
   
   return (
     <div>

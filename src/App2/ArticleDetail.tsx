@@ -14,9 +14,13 @@ type ArticleItem = {
 type ArticleProps = {
   data:ArticleItem[]
 }
+type Params = {
+  id:string
+}
 
 function ArticleDetail(props:ArticleProps){
-  const id = useParams();
+  const {id}:Params = useParams();
+  
 
   const findTopick = props.data.find(item => item.id === Number(id));
 
@@ -25,8 +29,12 @@ function ArticleDetail(props:ArticleProps){
       <Link className="topick-back" to="/">戻る</Link>
       <div className="article-topick">
         <p>記事詳細</p>
-        <p className="topick-title">{findTopick!.title}</p>
-        <p className="topick-text">{findTopick!.body}</p>
+        {findTopick &&
+          <>
+            <p className="topick-title">{findTopick.title}</p>
+            <p className="topick-text">{findTopick.body}</p>
+          </>
+        }
       </div>
     </div>
   )

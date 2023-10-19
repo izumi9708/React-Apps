@@ -22,7 +22,7 @@
   padding: 10px;
 }
 .material-symbols-outlined {
-  font-size: 23px;
+  font-size: 22px;
 }
 .form-item label {
   position: relative;
@@ -32,6 +32,7 @@
   top: -1px;
   right: 5px;
   cursor: pointer;
+  font-size: 22px;
 }
 .form-btn-wrap {
   margin-top: 20px;

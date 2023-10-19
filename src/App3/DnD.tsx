@@ -1,7 +1,7 @@
 import React  from 'react';
 import {dndList} from './ts/DnDList';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
-import type { DroppableProvided, DraggableProvided } from 'react-beautiful-dnd';
+import type { DroppableProvided, DraggableProvided, DropResult } from 'react-beautiful-dnd';
 import {useState} from 'react';
 
 import './css/DnD.css';
@@ -9,13 +9,7 @@ import './css/DnD.css';
 function DnD(){
   const [list,setList] = useState(dndList);
 
-  type DragEnd = (event:EventObj) => void;
-
-  type EventObj = {
-    draggableId:string;
-    index:number;
-    destination:EventObj
-  }
+  type DragEnd = (event:DropResult) => void;
 
   const dragEnd:DragEnd = (event) => {
     if(event.destination){
@@ -28,7 +22,6 @@ function DnD(){
       });
 
       const [dragItem] = items.splice(index_num,1);
-      console.log(dragItem)
       items.splice(event.destination.index,0,dragItem);
       
       setList(items);
@@ -42,8 +35,8 @@ function DnD(){
   return (
     <div className="dnd wrap">
       ドラッグ&ドロップ<span className="file-name">(DnD.tsx)</span>
-      <DragDropContext onDragEnd={() => dragEnd}>
-        <Droppable droppableId="dnd-list"　type="droppableItem">
+      <DragDropContext onDragEnd={(e)=>dragEnd(e)}>
+        <Droppable droppableId="dnd-list" type="droppableItem">
           {(provided:DroppableProvided) => (
             <ul className="dnd-area" ref={provided.innerRef} {...provided.droppableProps}>
               {list.map((item, index) => (

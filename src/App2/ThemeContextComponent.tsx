@@ -1,4 +1,4 @@
-import * as React  from 'react';
+import React  from 'react';
 import {useState,createContext} from 'react';
 import ThemeProvider from './ThemeProvider';
 
@@ -23,6 +23,8 @@ interface Context {
   toggleTheme:(str:string) => void;
 }
 
+export type {Context};
+
 
 const toggleTheme = (str:string):void => {
   const are = document.querySelector('.toggle-area')!;
@@ -40,18 +42,14 @@ const toggleTheme = (str:string):void => {
 export const ThemeContext = createContext<Context>({currentTheme:'',toggleTheme:toggleTheme});
 
 function ThemeContextComponent(){
-  const [currentTheme,setTheme] = useState<string>();
+  const [currentTheme,setTheme] = useState<string>('');
 
   return (
     <div className="theme-wrap wrap">
       コンテキストを使用したテーマ切り替え<span className="file-name">(ThemeContextComponent.tsx)</span>
-      {currentTheme ?
       <ThemeContext.Provider value={{currentTheme,toggleTheme}}>
         <ThemeProvider/>
       </ThemeContext.Provider>
-      :
-      ''
-      }
     </div>
   )
 }

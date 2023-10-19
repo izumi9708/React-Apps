@@ -1,9 +1,8 @@
-import * as React  from 'react';
-import {useState,useEffect,useContext,createContext} from 'react';
-import {ThemeContext} from './ThemeContextComponent';
+import React  from 'react';
 import ThemeToggler from './ThemeToggler';
 
 function ThemeProvider(){
+  
   return (
     <div className="">
       <div className="toggle-area">

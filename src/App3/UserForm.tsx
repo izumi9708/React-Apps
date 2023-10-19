@@ -1,4 +1,4 @@
-import * as React  from 'react';
+import React  from 'react';
 import {useState,useEffect,useMemo} from 'react';
 import './css/UserForm.css';
 
@@ -84,7 +84,7 @@ function UserForm(){
       if(err)err.remove();
     }
 
-    if(errCount == 0){
+    if(errCount === 0){
       const form = new FormData();
       form.append('name',name.value);
       form.append('mail',mail.value);
@@ -109,6 +109,7 @@ function UserForm(){
 
   return (
     <div className="user-form-wrap wrap">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
       ユーザーフォーム（作成中）
       <div className="user-form-content">
         {

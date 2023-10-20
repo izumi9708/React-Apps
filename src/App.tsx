@@ -1,4 +1,4 @@
-import * as React  from 'react';
+import React  from 'react';
 import './App.css';
 import App1 from './App1/App1';
 import App2 from './App2/App2';

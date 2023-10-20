@@ -153,6 +153,7 @@ function UserForm(){
           (
             <form>
             <div className="form-item">
+              <div className='back'>戻る</div>
               <p>ユーザー名</p>
               <p>{String(formData.get('name'))}</p>
               <input type="hidden" name="name" value={String(formData.get('name'))}/>

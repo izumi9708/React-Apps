@@ -1,4 +1,4 @@
-import * as React  from 'react';
+import React  from 'react';
 import {useState,useEffect,createContext} from 'react';
 
 
@@ -24,7 +24,7 @@ function App2(){
       <WeatherApp/>
       <SearchAnime/>
       <Quiz data={quizData}/>
-      <ArticleIndex/>
+      {/* <ArticleIndex/> */}
       {/* <UseAuth/> */}
       </AppContext.Provider>
       {/* <DamyFetch/> */}

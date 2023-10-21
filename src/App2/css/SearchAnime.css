@@ -78,3 +78,7 @@
   font-size: 14px;
   color: #8a8a8a;
 }
+.title-wrap {
+  display: flex;
+  align-items: center;
+}

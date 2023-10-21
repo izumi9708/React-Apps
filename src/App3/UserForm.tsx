@@ -1,5 +1,5 @@
 import React  from 'react';
-import {useState,useEffect,useMemo} from 'react';
+import {useState} from 'react';
 import './css/UserForm.css';
 
 // 以下の要件に従って、Reactコンポーネントを実装してください。
@@ -110,7 +110,7 @@ function UserForm(){
   return (
     <div className="user-form-wrap wrap">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-      ユーザーフォーム（作成中）
+      ユーザーフォーム
       <div className="user-form-content">
         {
           state === 'input' 
@@ -120,19 +120,19 @@ function UserForm(){
             <div className="form-item">
               <p>ユーザー名</p>
               <label>
-                <input type="text" placeholder="例）山田太郎" name="name"/>
+                <input type="text" placeholder="例）山田太郎" name="name" defaultValue={ formData ? String(formData?.get('name')) : ''}/>
               </label>
             </div>
             <div className="form-item">
               <p>メールアドレス</p>
               <label>
-                <input type="text" placeholder="例）xxxx@xxx.com" name="mail"/>
+                <input type="text" placeholder="例）xxxx@xxx.com" name="mail" defaultValue={formData ? String(formData?.get('mail')) : ''}/>
               </label>
             </div>
             <div className="form-item">
               <p>パスワード</p>
               <label>
-                <input type="password" placeholder="半角英数字" name="pass"/>
+                <input type="password" placeholder="半角英数字" name="pass" defaultValue={formData ? String(formData?.get('pass')) : ''}/>
                 <span 
                   className="material-symbols-outlined close"
                   onClick={displayPass}
@@ -181,16 +181,27 @@ function UserForm(){
           state === 'input' 
           ?
           <button type="button" className="form-btn"
-            onClick={sendForm}
-          >確認</button>
+            onClick={sendForm}>
+              確認
+          </button>
+
           : state === 'confirm' ?
+          <>
+          <button type='button' className='form-back-btn'
+            onClick={() => setState('input')}>
+            戻る
+          </button>
           <button type="button" className="form-btn"
-            onClick={() => setState('send')}
-          >送信</button>
+            onClick={() => setState('send')}>
+            送信
+          </button>
+          </>
+
           :
           <button type="button" className="form-btn"
-            onClick={() => setState('input')}
-          >トップへ</button>
+            onClick={() => setState('input')}>
+              トップへ
+          </button>
           }
             
         </div> 

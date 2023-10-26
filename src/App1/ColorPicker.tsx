@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useState,ChangeEvent} from 'react';
 import './css/ColorPicker.css';
 
@@ -32,7 +32,7 @@ function ColorPicker(){
             <input type="color" value={initialColor} onChange={colorChange}/>
           </div>
         </div>
-        <div className="select-wrap-item"><p>コード：</p><p className="preview-code">{initialColor}</p></div>
+        <div className="select-wrap-item"><p>コード：</p><p data-testid="target-element" className="preview-code">{initialColor}</p></div>
       </div>
 
     </div>

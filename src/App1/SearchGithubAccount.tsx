@@ -109,7 +109,7 @@ function SearchAccount(){
 
       {user && 
         (<div className="user-info">
-          <div className="user-img"><img src={user.avatar_url}/></div>
+          <div className="user-img"><img alt='githubのアイコン画像' src={user.avatar_url}/></div>
           <div className="user-text">
             <p className="user-name">{user.name ? user.name : '---'}</p>
             <div className="user-detail">

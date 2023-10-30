@@ -1,5 +1,5 @@
 import {useState,useEffect} from 'react';
-import { FutureList } from './WeatherWeek';
+import { FutureList } from '../App1/WeatherWeek';
 
 interface FutureItem {
   dt_txt:string;
@@ -25,16 +25,18 @@ function WeatherSubDisplay(props:PropsData){
 
 
   const createFutureObj:CreateFutureObj = (newData) => {
+    
     const futureObj:any = {};
     const dataArray:FutureItem[] = [];
 
     const futureDateArray = newData.list.filter(item => {
       const futureDate = new Date(item.dt_txt);
       
-      if(futureDate.getDate() > props.currentDate.getDate()){
+      
+      if(futureDate.getDate() !== props.currentDate.getDate()){
         return item;
       }
-    })
+    })    
 
     if(futureDateArray){
       futureDateArray.forEach(item => {
@@ -46,7 +48,7 @@ function WeatherSubDisplay(props:PropsData){
           futureObj[dateString] = [...futureObj[dateString],item];
         }
       });
-    }    
+    }        
 
     if(futureObj){
       Object.keys(futureObj).forEach(objItem => {
@@ -75,8 +77,7 @@ function WeatherSubDisplay(props:PropsData){
           dataArray.push(value[4]);
         }
       })
-    }
-    
+    }    
     setFutureData(dataArray)
     
   }
@@ -84,7 +85,7 @@ function WeatherSubDisplay(props:PropsData){
   useEffect(() => {
     createFutureObj(props.futureData);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[props.futureData])
+  },[props.futureData])  
   
   return (
     <div className="sub-weather">

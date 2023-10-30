@@ -1,7 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import {useState,MouseEvent} from 'react';
 import './css/ShoppingCart.css';
-import { numbers } from './ts/NumberList';
 
 // Reactコンポーネントを使用して、シンプルなショッピングカート機能を実装してください。
 // 要件：

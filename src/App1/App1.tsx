@@ -4,9 +4,10 @@ import ToggleSwitch         from './ToggleSwitch';
 import ColorPicker          from './ColorPicker';
 import FilteredList         from './FilteredList';
 import {emailList}          from './ts/FilteredList';
-import ShoppingCart         from './ShoppingCart';
-import {productsData}       from './ts/ShoppingCart';
 import SearchAccount        from './SearchGithubAccount';
+import WeatherApp from './WeatherApp';
+import SearchAnime from '../App1/SearchAnime';
+
 
 function App1(){
 
@@ -14,9 +15,10 @@ function App1(){
     <>
       {/* <CountDownTimer/> */}
       <SearchAccount/>
+      <WeatherApp/>
+      <SearchAnime/>
       <ColorPicker/>
       <FilteredList list={emailList}/>
-      <ShoppingCart products={productsData}/>
       <ToggleSwitch/>
     </>
   )

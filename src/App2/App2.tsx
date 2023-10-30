@@ -2,15 +2,17 @@ import React  from 'react';
 import {useState,useEffect,createContext} from 'react';
 
 
-import WeatherApp from './WeatherApp';
+import WeatherApp from '../App1/WeatherApp';
 import Quiz from './Quiz';
 import {quizData} from './ts/Quiz';
 import ArticleIndex from './ArticleIndex';
-import SearchAnime from './SearchAnime';
 import UseAuth from './UseAuth';
 import DamyFetch from './DamyFetch';
 import BlogPostList from './BlogPostList';
 import ThemeContextComponent from './ThemeContextComponent';
+import ShoppingCart         from '../App2/ShoppingCart';
+import {productsData}       from './ts/ShoppingCart';
+
 
 export const AppContext = createContext({});
 
@@ -21,8 +23,6 @@ function App2(){
   return (
     <>
       <AppContext.Provider value={{testState,setState}}>
-      <WeatherApp/>
-      <SearchAnime/>
       <Quiz data={quizData}/>
       {/* <ArticleIndex/> */}
       {/* <UseAuth/> */}
@@ -30,6 +30,7 @@ function App2(){
       {/* <DamyFetch/> */}
       {/* <BlogPostList/> */}
       <ThemeContextComponent/>
+      <ShoppingCart products={productsData}/>
       
     </>
   )

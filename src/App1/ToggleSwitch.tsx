@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useState,useEffect} from 'react';
 import './css/ToggleSwitch.css';
 
@@ -30,7 +30,7 @@ function ToggleSwitch(){
         </div>
       )
     }
-      ボタンの状態：{toggleState ? 'ON' : 'OFF'}
+      <span data-testid="btn-status">ボタンの状態：{toggleState ? 'ON' : 'OFF'}</span>
     </div>
   )
 }

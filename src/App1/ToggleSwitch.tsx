@@ -21,11 +21,11 @@ function ToggleSwitch(){
     <div className="toggle-switch wrap">
       トグルスイッチ
       {toggleState ? (
-        <div className="switch-btn toggle-active" onClick={changeToggle}>
+        <div data-testid="toggle-btn" className="switch-btn toggle-active" onClick={changeToggle}>
           <div className="btn-circle circle-active"></div>
         </div>
       ) : (
-        <div className="switch-btn" onClick={changeToggle}>
+        <div data-testid="toggle-btn" className="switch-btn" onClick={changeToggle}>
           <div className="btn-circle"></div>
         </div>
       )

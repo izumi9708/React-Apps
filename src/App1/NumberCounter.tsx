@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import {useState,useEffect} from 'react';
 import './css/NumberCounter.css';
 
@@ -18,7 +18,7 @@ function NumberCounter(){
 
   type ClickCounter = (str:string) => void;
   const clickCounter:ClickCounter = (str) => {
-    if(str == 'add') {
+    if(str === 'add') {
       setNumber(number + 1);
 
     }else {
